@@ -12,11 +12,11 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com
+   git clone [https://github.com](https://github.com/selenadanilova-ux/shift-aqa-web)
    ```
 2. Перейдите в папку нужного задания:
    ```bash
-   cd ИМЯ_РЕПОЗИТОРИЯ/task-1-screenshot-tests
+   cd shift-aqa-web/task-1-screenshot-tests
    ```
 3. Установите зависимости и запустите код по инструкции внутри папки задания:
    ```bash
