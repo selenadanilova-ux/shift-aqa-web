@@ -12,7 +12,7 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone [https://github.com](https://github.com/selenadanilova-ux/shift-aqa-web)
+   git clone https://github.com/selenadanilova-ux/shift-aqa-web
    ```
 2. Перейдите в папку нужного задания:
    ```bash
