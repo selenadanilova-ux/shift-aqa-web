@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://upsaclay.fr" width="400" alt="ЦФТ ШИФТ Логотип">
+  <img src="cft-logo.png" width="300" alt="ЦФТ ШИФТ Логотип">
 </p>
 
 # Интенсив ШИФТ — Практические задания
