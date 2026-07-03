@@ -18,6 +18,6 @@
   "homepage": "https://github.com/selenadanilova-ux/shift-aqa-web#readme",
   "devDependencies": {
     "@playwright/test": "^1.61.1",
-    "@types/node": "^26.0.1"
+    "@types/node": "^26.1.0"
   }
 }
