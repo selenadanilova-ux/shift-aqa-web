@@ -46,8 +46,8 @@ test('Проверка перехода в каталог по кнопки Ко
     await page.getByTestId('home-category-candy').click()
     await expect.soft(page).toHaveTitle('СладкийДом - Интернет-магазин сладостей')
     await expect.soft(page).toHaveURL(`${baseURL}catalog?category=candy`)
-    await page.waitForSelector('[data-testid^="catalog-product-category-prod-"]')
-    const categoryItems = page.locator('[data-testid^="catalog-product-category-prod-"]')
+    await page.waitForSelector('[data-testid^="catalog-product-image-prod-"]')
+    const categoryItems = page.locator('[data-testid^="catalog-product-image-prod-"]')
     const count = await categoryItems.count()
    
     console.log(count)

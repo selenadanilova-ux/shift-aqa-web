@@ -8,12 +8,6 @@ if (!baseURL) {
 
 //  1. Проверки на интерактивные элементы в хедере
 
-test('Проверка перехода на страницу Акции', async ({page}) => {
-    await page.goto('promotions')
-    await expect.soft(page).toHaveTitle('Акции | СладкийДом')
-    await expect.soft(page).toHaveURL(`${baseURL}promotions`)
-})
-
 test('Проверка текста на кнопке Акции в хедере', async ({page}) => {
     await page.goto('')
     await expect.soft(page.getByTestId('header-nav-link-promotions')).toHaveText('Акции')
@@ -80,6 +74,27 @@ test('Проверка перехода на страницу корзина', a
     await expect.soft(page).toHaveURL(`${baseURL}cart`)
 })
 
+test('Проверка текста кнопки Смотреть акции', async ({page}) => {
+    await page.goto('')
+    await expect.soft(page.getByTestId('home-hero-promotions-button')).toHaveText('Смотреть акции')
+})
+
+test('Проверка перехода на страницу акций', async ({page}) => {
+    await page.goto('promotions')
+    await expect.soft(page).toHaveTitle('Акции | СладкийДом')
+    await expect.soft(page).toHaveURL(`${baseURL}promotions`)
+})
+
+test('Проверка текста Добро пожаловать в СладкийДом', async ({page}) => {
+    await page.goto('')
+    await expect.soft(page.getByTestId('home-hero-title')).toHaveText('Добро пожаловать в СладкийДом')
+})
+
+test('Проверка текста внизу заголовка Добро пожаловать в СладкийДом', async ({page}) => {
+    await page.goto('')
+    await expect.soft(page.getByTestId('home-hero-description')).toContainText('Лучшие сладости')
+})
+
 // 2. Проверка интерактивных элементов на плашке кук
 
 test('Проверка закрытия плашки кук кнопкой Отклонить', async ({page}) => {
@@ -113,11 +128,4 @@ test('Проверка текста ссылки политики конфиде
 
 // 3. Определите особенность страницы каталог
 
-// Особенность 1: при выборе категории товары обновляются динамически 
-// без перезагрузки всей страницы. 
-// 
-// Особенность 2: в момент загрузки отображаются лоадеры элементов.
-// Нужно дожидаться их исчезновения и появления реальных карточек.
-
-// Особенность 3: Весовой формат цен. 
-// Стоимость некоторых товаров указана за килограмм, а не за штуку.
+// Неразрывный пробел &nbsp между тысячами и сотнями.
