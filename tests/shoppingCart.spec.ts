@@ -16,10 +16,11 @@ test('Корзина с товаром', async ({ page }) => {
     await page.getByTestId('header-cart-button').click();
     await page.waitForURL('**/cart');
     await expect.soft(page).toHaveScreenshot({
+        fullPage: true,
         mask: [
         page.locator('p.text-sm.font-semibold.text-primary'),
-        page.getByTestId('cart-captcha-image')                       
-    ], 
-        maxDiffPixels: 200
+        page.getByTestId('cart-captcha-image'),
+        page.getByTestId('cart-total-price')                       
+    ]        
         });
 });
