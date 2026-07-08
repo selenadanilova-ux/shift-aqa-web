@@ -6,7 +6,20 @@ if (!baseURL) {
     throw new Error('baseURL не задан в конфиге')
 }
 
+
 //  1. Проверки на интерактивные элементы в хедере
+
+test('Проверка текста на кнопке Главная в хедере', async ({page}) => {
+    await page.goto('')
+    await expect.soft(page.getByTestId('header-nav-link-home')).toHaveText('Главная')
+})
+
+test('Переход на страницу Главная через хедер', async ({ page }) => {
+    await page.goto('');
+    await page.getByTestId('header-nav-link-home').click();
+    await expect.soft(page).toHaveURL(`${baseURL}`);
+    await expect.soft(page).toHaveTitle('Главная');
+});
 
 test('Переход на страницу Каталог через хедер', async ({ page }) => {
     await page.goto('');
@@ -87,6 +100,14 @@ test('Переход на страницу FAQ', async ({ page }) => {
     await expect.soft(page).toHaveTitle('СладкийДом - Интернет-магазин сладостей');
 });
 
+test('Переход на страницу Корзина', async ({ page }) => {
+    await page.goto('');
+    await page.getByTestId('header-cart-button').click();
+    await expect.soft(page).toHaveURL(`${baseURL}cart`);
+    await expect.soft(page).toHaveTitle('СладкийДом - Интернет-магазин сладостей');
+});
+
+
 // 2. Проверка интерактивных элементов на плашке кук
 
 test('Проверка текстов на плашке кук', async ({page}) => {
@@ -109,12 +130,11 @@ test('Переход по ссылке политики конфиденциал
     await expect.soft(page).toHaveURL(`${baseURL}privacy`)
 })
 
-
-
 test('Проверка текста ссылки политики конфиденциальности', async ({page}) => {
     await page.goto('')
     await expect.soft(page.getByTestId('cookie-consent-privacy-link')).toHaveText('политикой конфиденциальности')
 })
+
 
 // 3. Определите особенность страницы каталог
 
