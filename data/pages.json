@@ -1,0 +1,70 @@
+[
+  {
+    "name": "Главная",
+    "url": ""
+  },
+  {
+    "name": "Каталог",
+    "url": "/catalog"
+  },
+  {
+    "name": "Акции",
+    "url": "/promotions"
+  },
+  {
+    "name": "Доставка",
+    "url": "/delivery"
+  },
+  {
+    "name": "О нас",
+    "url": "/about"
+  },
+  {
+    "name": "Контакты",
+    "url": "/contacts"
+  },
+  {
+    "name": "Обратная связь",
+    "url": "/feedback"
+  },
+  {
+    "name": "FAQ",
+    "url": "/faq"
+  },
+  {
+    "name": "Корзина",
+    "url": "/cart"
+  },
+  {
+    "name": "Шоколад",
+    "url": "/catalog?category=chocolate"
+  },
+  {
+    "name": "Конфеты",
+    "url": "/catalog?category=candy"
+  },
+  {
+    "name": "Печенье",
+    "url": "/catalog?category=cookies"
+  },
+  {
+    "name": "Торты",
+    "url": "/catalog?category=cakes"
+  },
+  {
+    "name": "Мармелад",
+    "url": "/catalog?category=marmalade"
+  },
+  {
+    "name": "Зефир",
+    "url": "/catalog?category=marshmallow"
+  },
+  {
+    "name": "Политика конфиденциальности",
+    "url": "/privacy"
+  },
+  {
+    "name": "Пользовательское соглашение",
+    "url": "/terms"
+  }
+]

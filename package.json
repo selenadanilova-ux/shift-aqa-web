@@ -1,0 +1,23 @@
+{
+  "name": "shift-aqa-web",
+  "version": "1.0.0",
+  "description": "Репозиторий для выполнения домашних работ и практических заданий в рамках интенсива ШИФТ. Все проекты реализованы на **TypeScript**.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selenadanilova-ux/shift-aqa-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/selenadanilova-ux/shift-aqa-web/issues"
+  },
+  "homepage": "https://github.com/selenadanilova-ux/shift-aqa-web#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.0"
+  }
+}
