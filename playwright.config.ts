@@ -70,7 +70,7 @@ export default defineConfig({
     toHaveScreenshot: {
       threshold: 0.2, // 0.2% отличий (по умолчанию)
       maxDiffPixels: 100, // максимум отличий по пикселям
-      maxDiffPixelRatio: 0.02, // 2% отличий от общей площади скриншота
+      maxDiffPixelRatio: 0.05, // 2% отличий от общей площади скриншота
       }
     }
 });

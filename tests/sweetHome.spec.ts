@@ -3,14 +3,13 @@ import pages from '../data/pages.json';
 
 pages.forEach((testPage: {name: string, url: string}) => {
 
-    test(`Страница ${testPage.name}`, async({page}) => {
-        
-        const width = await page.evaluate( () => window.innerWidth);
+    test(`Страница ${testPage.name}`, async ({ page }) => {
+
+        const width = await page.evaluate(() => window.innerWidth);
 
         await page.goto(testPage.url);
 
-        if (testPage.url == ''){
-
+        if (testPage.url == '') { 
             await expect.soft(page.getByTestId('cookie-consent-banner')).toHaveScreenshot('Плашка кук.png');
             await page.getByTestId('cookie-accept-button').click();
 
@@ -20,18 +19,15 @@ pages.forEach((testPage: {name: string, url: string}) => {
                 await page.getByTestId('header-burger-menu-button').click();
             }
         } else {
-            await page.getByTestId('cookie-accept-button').click()
+            await page.getByTestId('cookie-accept-button').click();
         }
-        
-        await page.getByTestId('cookie-accept-button').click();
 
-        await expect.soft(page).toHaveScreenshot( {
+        await expect.soft(page).toHaveScreenshot({
             fullPage: true,
             mask: [
-                page.locator('[data-testid^= "catalog-product-price-prod-"]'),
+                page.locator('[data-testid^="catalog-product-price-prod-"]'),
                 page.getByTestId('feedback-captcha-image')
             ]
         });
-    
-    })
+    });
 });
