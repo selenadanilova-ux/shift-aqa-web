@@ -6,6 +6,7 @@ if (!baseURL) {
     throw new Error('baseURL не задан в конфиге')
 }
 
+
 //  1. Проверки на интерактивные элементы в хедере
 
 test('Проверка текста на кнопке Главная в хедере', async ({page}) => {
@@ -129,12 +130,11 @@ test('Переход по ссылке политики конфиденциал
     await expect.soft(page).toHaveURL(`${baseURL}privacy`)
 })
 
-
-
 test('Проверка текста ссылки политики конфиденциальности', async ({page}) => {
     await page.goto('')
     await expect.soft(page.getByTestId('cookie-consent-privacy-link')).toHaveText('политикой конфиденциальности')
 })
+
 
 // 3. Определите особенность страницы каталог
 

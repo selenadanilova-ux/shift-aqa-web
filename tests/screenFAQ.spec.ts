@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test';
 
-test('Cтраницf FAQ с раскрытым бургером ответа на вопрос', async ({ page }) => {
+test('Cтраница FAQ с раскрытым бургером ответа на вопрос', async ({ page }) => {
     await page.goto('/faq');
     const faqButtons = page.locator('svg.lucide-chevron-down');
     const count = await faqButtons.count();
