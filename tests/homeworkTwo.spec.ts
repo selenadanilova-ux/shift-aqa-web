@@ -129,8 +129,6 @@ test('Переход по ссылке политики конфиденциал
     await expect.soft(page).toHaveURL(`${baseURL}privacy`)
 })
 
-
-
 test('Проверка текста ссылки политики конфиденциальности', async ({page}) => {
     await page.goto('')
     await expect.soft(page.getByTestId('cookie-consent-privacy-link')).toHaveText('политикой конфиденциальности')
